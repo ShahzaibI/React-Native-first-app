@@ -4,7 +4,7 @@ import React from 'react'
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>App</Text>
+      <Text style={styles.title}>My First App</Text>
       <Button title='Press Here' color='#007AFF'/>
     </View>
   )
