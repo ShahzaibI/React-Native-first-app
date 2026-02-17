@@ -1,11 +1,12 @@
-import { View, Text, Button, StyleSheet } from 'react-native'
-import React from 'react'
+import { View, StyleSheet } from 'react-native';
+import React from 'react';
+import JSX from './src/components/JSX';
+ 
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>My First App</Text>
-      <Button title='Press Here' color='#007AFF'/>
+      <JSX />
     </View>
   )
 }
@@ -18,12 +19,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#f5f5f5',
     padding: 20,
   },
-  title: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    marginBottom: 20,
-    color: '#333',
-  },
-})
+});
 
-export default App
+export default App;
