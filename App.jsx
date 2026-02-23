@@ -15,6 +15,12 @@ import ClassComponents from './src/components/ClassComponents';
 import UseEffectHook from './src/components/UseEffectHook';
 import UseEffectHookUpdatingPhase from './src/components/UseEffectHookUpdatingPhase';
 import UseEffectHookUnmoiuntingPhase from './src/components/UseEffectHookUnmoiuntingPhase';
+import HideShowToggle from './src/components/HideShowToggle';
+import StyleWithButton from './src/components/StyleWithButton';
+import Loader from './src/components/Loader';
+import PressableComponent from './src/components/PressableComponent';
+import StatusBarExample from './src/components/StatusBarExample';
+import UseRefHook from './src/components/UseRefHook';
  
 
 const App = () => {
@@ -34,7 +40,13 @@ const App = () => {
       {/* <ClassComponents /> */}
       {/* <UseEffectHook /> */}
       {/* <UseEffectHookUpdatingPhase /> */}
-      <UseEffectHookUnmoiuntingPhase />
+      {/* <UseEffectHookUnmoiuntingPhase /> */}
+      {/* <HideShowToggle /> */}
+      {/* <StyleWithButton /> */}
+      {/* <Loader /> */}
+      {/* <PressableComponent /> */}
+      {/* <StatusBarExample /> */}
+      <UseRefHook />
     </View>
   )
 }
