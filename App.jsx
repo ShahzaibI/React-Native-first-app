@@ -21,6 +21,10 @@ import Loader from './src/components/Loader';
 import PressableComponent from './src/components/PressableComponent';
 import StatusBarExample from './src/components/StatusBarExample';
 import UseRefHook from './src/components/UseRefHook';
+import ModalDialogBox from './src/components/ModalDialogBox';
+import AlertExample from './src/components/AlertExample';
+import GET_API from './src/components/GET_API';
+import POST_API from './src/components/POST_API';
  
 
 const App = () => {
@@ -46,7 +50,11 @@ const App = () => {
       {/* <Loader /> */}
       {/* <PressableComponent /> */}
       {/* <StatusBarExample /> */}
-      <UseRefHook />
+      {/* <UseRefHook /> */}
+      {/* <ModalDialogBox /> */}
+      {/* <AlertExample /> */}
+      {/* <GET_API /> */}
+      <POST_API />
     </View>
   )
 }
