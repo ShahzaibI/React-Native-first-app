@@ -33,45 +33,51 @@ import PlatformExample from './src/components/PlatformExample';
 import Search from './src/components/Search';
 import AsyncStorageExample from './src/components/AsyncStorageExample';
 import ImageComponent from './src/components/ImageComponent';
- 
+import Parent from './src/components/Parent';
+import { Provider } from 'react-redux';
+import {store } from './src/redux/store/store'
+import CounterWithRedux from './src/components/CounterWithRedux';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      {/* <JSX /> */}
-      {/* <UseStateHook /> */}
-      {/* <Props /> */}
-      {/* <OnPress /> */}
-      {/* <InputText /> */}
-      {/* <Styling /> */}
-      {/* <FlatListScreen /> */}
-      {/* <SectionListScreen /> */}
-      {/* <LoginForm /> */}
-      {/* <ContactListScreen /> */}
-      {/* <Grid /> */}
-      {/* <ClassComponents /> */}
-      {/* <UseEffectHook /> */}
-      {/* <UseEffectHookUpdatingPhase /> */}
-      {/* <UseEffectHookUnmoiuntingPhase /> */}
-      {/* <HideShowToggle /> */}
-      {/* <StyleWithButton /> */}
-      {/* <Loader /> */}
-      {/* <PressableComponent /> */}
-      {/* <StatusBarExample /> */}
-      {/* <UseRefHook /> */}
-      {/* <ModalDialogBox /> */}
-      {/* <AlertExample /> */}
-      {/* <GET_API /> */}
-      {/* <POST_API /> */}
-      {/* <PUT_API /> */}
-      {/* <PATCH_API /> */}
-      {/* <DELETE_API /> */}
-      {/* <GET_API_LIST /> */}
-      {/* <PlatformExample /> */}
-      {/* <Search /> */}
-      {/* <AsyncStorageExample /> */}
-      <ImageComponent />
-    </View>
+    <Provider store={store}>
+      <View style={styles.container}>
+        {/* <JSX /> */}
+        {/* <UseStateHook /> */}
+        {/* <Props /> */}
+        {/* <OnPress /> */}
+        {/* <InputText /> */}
+        {/* <Styling /> */}
+        {/* <FlatListScreen /> */}
+        {/* <SectionListScreen /> */}
+        {/* <LoginForm /> */}
+        {/* <ContactListScreen /> */}
+        {/* <Grid /> */}
+        {/* <ClassComponents /> */}
+        {/* <UseEffectHook /> */}
+        {/* <UseEffectHookUpdatingPhase /> */}
+        {/* <UseEffectHookUnmoiuntingPhase /> */}
+        {/* <HideShowToggle /> */}
+        {/* <StyleWithButton /> */}
+        {/* <Loader /> */}
+        {/* <PressableComponent /> */}
+        {/* <StatusBarExample /> */}
+        {/* <UseRefHook /> */}
+        {/* <ModalDialogBox /> */}
+        {/* <AlertExample /> */}
+        {/* <GET_API /> */}
+        {/* <POST_API /> */}
+        {/* <PUT_API /> */}
+        {/* <PATCH_API /> */}
+        {/* <DELETE_API /> */}
+        {/* <GET_API_LIST /> */}
+        {/* <PlatformExample /> */}
+        {/* <Search /> */}
+        {/* <AsyncStorageExample /> */}
+        {/* <ImageComponent /> */}
+        <CounterWithRedux />
+      </View>
+    </Provider>
   )
 }
 
