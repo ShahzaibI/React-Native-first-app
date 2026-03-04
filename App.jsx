@@ -31,6 +31,8 @@ import DELETE_API from './src/components/DELETE_API';
 import GET_API_LIST from './src/components/GET_API_LIST';
 import PlatformExample from './src/components/PlatformExample';
 import Search from './src/components/Search';
+import AsyncStorageExample from './src/components/AsyncStorageExample';
+import ImageComponent from './src/components/ImageComponent';
  
 
 const App = () => {
@@ -66,7 +68,9 @@ const App = () => {
       {/* <DELETE_API /> */}
       {/* <GET_API_LIST /> */}
       {/* <PlatformExample /> */}
-      <Search />
+      {/* <Search /> */}
+      {/* <AsyncStorageExample /> */}
+      <ImageComponent />
     </View>
   )
 }
