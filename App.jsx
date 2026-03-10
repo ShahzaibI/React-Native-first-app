@@ -1,5 +1,10 @@
-import { View, StyleSheet } from 'react-native';
+import './global.css';
+import { View, StyleSheet, LogBox } from 'react-native';
 import React from 'react';
+
+// Ignore SafeAreaView deprecation warning
+LogBox.ignoreLogs(['SafeAreaView has been deprecated']);
+
 import JSX from './src/components/JSX';
 import OnPress from './src/components/OnPress';
 import UseStateHook from './src/components/UseStateHook';
@@ -37,6 +42,18 @@ import Parent from './src/components/Parent';
 import { Provider } from 'react-redux';
 import {store } from './src/redux/store/store'
 import CounterWithRedux from './src/components/CounterWithRedux';
+import One from './src/components/One';
+import MyLogin from './src/components/MyLogin';
+import AnimatedCardFlip from './src/components/AnimatedCardFlip';
+import Register from './src/components/Register';
+import Login from './src/components/Login';
+import ForgotPassword from './src/components/ForgotPassword';
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
+
 
 const App = () => {
   return (
@@ -75,8 +92,26 @@ const App = () => {
         {/* <Search /> */}
         {/* <AsyncStorageExample /> */}
         {/* <ImageComponent /> */}
-        <CounterWithRedux />
+
+        {/* This is for Redux state managment */}
+        {/* <CounterWithRedux /> */}
+
+        {/* This is for Zustand state managment */}
+        {/* <One /> */}
+
+        {/* <MyLogin /> */}
+        {/* <Register /> */}
+        {/* <Login /> */}
+        {/* <ForgotPassword /> */}
+        <NavigationContainer>
+        <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+        </Stack.Navigator>
+      </NavigationContainer>
       </View>
+      
     </Provider>
   )
 }
