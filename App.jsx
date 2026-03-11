@@ -1,6 +1,6 @@
 import './global.css';
 import { View, StyleSheet, LogBox } from 'react-native';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Ignore SafeAreaView deprecation warning
 LogBox.ignoreLogs(['SafeAreaView has been deprecated']);
@@ -50,14 +50,21 @@ import Login from './src/components/Login';
 import ForgotPassword from './src/components/ForgotPassword';
 import UserCRUD from './src/components/UserCRUD';
 import UserRealtimeCRUD from './src/components/UserRealtimeCRUD';
+import SwitchUI from './src/components/SwitchUI';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import SplashScreen from 'react-native-splash-screen';
 
 const Stack = createNativeStackNavigator();
 
 
 const App = () => {
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
+
   return (
     <Provider store={store}>
       <View style={styles.container}>
@@ -114,7 +121,8 @@ const App = () => {
         </NavigationContainer> */}
 
         {/* <UserCRUD /> */}
-        <UserRealtimeCRUD />
+        {/* <UserRealtimeCRUD /> */}
+        <SwitchUI />
       </View>
       
     </Provider>
