@@ -48,6 +48,8 @@ import AnimatedCardFlip from './src/components/AnimatedCardFlip';
 import Register from './src/components/Register';
 import Login from './src/components/Login';
 import ForgotPassword from './src/components/ForgotPassword';
+import UserCRUD from './src/components/UserCRUD';
+import UserRealtimeCRUD from './src/components/UserRealtimeCRUD';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -103,13 +105,16 @@ const App = () => {
         {/* <Register /> */}
         {/* <Login /> */}
         {/* <ForgotPassword /> */}
-        <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Register" component={Register} />
-          <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-        </Stack.Navigator>
-      </NavigationContainer>
+        {/* <NavigationContainer>
+          <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="Register" component={Register} />
+            <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+          </Stack.Navigator>
+        </NavigationContainer> */}
+
+        {/* <UserCRUD /> */}
+        <UserRealtimeCRUD />
       </View>
       
     </Provider>
