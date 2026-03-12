@@ -59,74 +59,89 @@ import SplashScreen from 'react-native-splash-screen';
 const Stack = createNativeStackNavigator();
 
 
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { RootNavigator } from './src/navigation/RootNavigator';
+
+
 const App = () => {
 
   useEffect(() => {
     SplashScreen.hide();
   }, []);
 
-  return (
-    <Provider store={store}>
-      <View style={styles.container}>
-        {/* <JSX /> */}
-        {/* <UseStateHook /> */}
-        {/* <Props /> */}
-        {/* <OnPress /> */}
-        {/* <InputText /> */}
-        {/* <Styling /> */}
-        {/* <FlatListScreen /> */}
-        {/* <SectionListScreen /> */}
-        {/* <LoginForm /> */}
-        {/* <ContactListScreen /> */}
-        {/* <Grid /> */}
-        {/* <ClassComponents /> */}
-        {/* <UseEffectHook /> */}
-        {/* <UseEffectHookUpdatingPhase /> */}
-        {/* <UseEffectHookUnmoiuntingPhase /> */}
-        {/* <HideShowToggle /> */}
-        {/* <StyleWithButton /> */}
-        {/* <Loader /> */}
-        {/* <PressableComponent /> */}
-        {/* <StatusBarExample /> */}
-        {/* <UseRefHook /> */}
-        {/* <ModalDialogBox /> */}
-        {/* <AlertExample /> */}
-        {/* <GET_API /> */}
-        {/* <POST_API /> */}
-        {/* <PUT_API /> */}
-        {/* <PATCH_API /> */}
-        {/* <DELETE_API /> */}
-        {/* <GET_API_LIST /> */}
-        {/* <PlatformExample /> */}
-        {/* <Search /> */}
-        {/* <AsyncStorageExample /> */}
-        {/* <ImageComponent /> */}
+  // return (
+  //   <Provider store={store}>
+  //     <View style={styles.container}>
+  //       {/* <JSX /> */}
+  //       {/* <UseStateHook /> */}
+  //       {/* <Props /> */}
+  //       {/* <OnPress /> */}
+  //       {/* <InputText /> */}
+  //       {/* <Styling /> */}
+  //       {/* <FlatListScreen /> */}
+  //       {/* <SectionListScreen /> */}
+  //       {/* <LoginForm /> */}
+  //       {/* <ContactListScreen /> */}
+  //       {/* <Grid /> */}
+  //       {/* <ClassComponents /> */}
+  //       {/* <UseEffectHook /> */}
+  //       {/* <UseEffectHookUpdatingPhase /> */}
+  //       {/* <UseEffectHookUnmoiuntingPhase /> */}
+  //       {/* <HideShowToggle /> */}
+  //       {/* <StyleWithButton /> */}
+  //       {/* <Loader /> */}
+  //       {/* <PressableComponent /> */}
+  //       {/* <StatusBarExample /> */}
+  //       {/* <UseRefHook /> */}
+  //       {/* <ModalDialogBox /> */}
+  //       {/* <AlertExample /> */}
+  //       {/* <GET_API /> */}
+  //       {/* <POST_API /> */}
+  //       {/* <PUT_API /> */}
+  //       {/* <PATCH_API /> */}
+  //       {/* <DELETE_API /> */}
+  //       {/* <GET_API_LIST /> */}
+  //       {/* <PlatformExample /> */}
+  //       {/* <Search /> */}
+  //       {/* <AsyncStorageExample /> */}
+  //       {/* <ImageComponent /> */}
 
-        {/* This is for Redux state managment */}
-        {/* <CounterWithRedux /> */}
+  //       {/* This is for Redux state managment */}
+  //       {/* <CounterWithRedux /> */}
 
-        {/* This is for Zustand state managment */}
-        {/* <One /> */}
+  //       {/* This is for Zustand state managment */}
+  //       {/* <One /> */}
 
-        {/* <MyLogin /> */}
-        {/* <Register /> */}
-        {/* <Login /> */}
-        {/* <ForgotPassword /> */}
-        {/* <NavigationContainer>
-          <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="Register" component={Register} />
-            <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-          </Stack.Navigator>
-        </NavigationContainer> */}
+  //       {/* <MyLogin /> */}
+  //       {/* <Register /> */}
+  //       {/* <Login /> */}
+  //       {/* <ForgotPassword /> */}
+  //       {/* <NavigationContainer>
+  //         <Stack.Navigator initialRouteName="Login" screenOptions={{ headerShown: false }}>
+  //           <Stack.Screen name="Login" component={Login} />
+  //           <Stack.Screen name="Register" component={Register} />
+  //           <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+  //         </Stack.Navigator>
+  //       </NavigationContainer> */}
 
-        {/* <UserCRUD /> */}
-        {/* <UserRealtimeCRUD /> */}
-        <SwitchUI />
-      </View>
+  //       {/* <UserCRUD /> */}
+  //       {/* <UserRealtimeCRUD /> */}
+  //       {/* <SwitchUI /> */}
+  //     </View>
       
-    </Provider>
-  )
+  //   </Provider>
+  // )
+
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>
+        <NavigationContainer>
+          <RootNavigator />
+        </NavigationContainer>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
+  );
 }
 
 const styles = StyleSheet.create({
